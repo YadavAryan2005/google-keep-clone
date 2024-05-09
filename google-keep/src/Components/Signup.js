@@ -18,12 +18,11 @@ export default function Signup(props) {
           },
         }
       );
-      props.setProgress(85);
-      let result = await client.json();
-      console.log(result);
       props.setProgress(100);
-      props.setAuth("signup");
+      let result = await client.json();
       alert("successfully");
+      console.log(result);
+      props.setAuth("signup");
     } catch (error) {
       alert(error);
     }
